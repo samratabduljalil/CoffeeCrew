@@ -86,9 +86,7 @@ while cap.isOpened():
 cap.release()
 hands.close()
 
-# Save hand raises as JSON
-with open("hand_raises.json", "w") as f:
-    json.dump(hand_raises, f)
+
 
 # Save a summary image (stitched frames)
 stitched_image = cv2.vconcat(processed_frames[:10]) if len(processed_frames) > 0 else None
